@@ -1,0 +1,27 @@
+{
+    "name": "HackerLearn Submission Extension",
+    "description": "Submit resources to HackerLearn in Chrome.",
+    "version": "1.0",
+    "manifest_version": 3,
+    "commands": {
+        "_execute_browser_action": {
+            "suggested_key": {
+                "default": "Alt+Shift+1"
+            }
+        },
+        "duplicate-tab": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+2",
+                "mac": "Command+Shift+2"
+            },
+            "description": "Duplicates the currently active tab because... why not?"
+        }
+    },
+    "background": {
+        "service_worker": "background.js"
+      },
+    "permissions": ["storage", "activeTab", "scripting"],
+    "action": {
+        "default_popup": "popup.html"
+      }
+}
